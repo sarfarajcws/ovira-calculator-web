@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-paper: #F6F3EC;
+  --color-paper-raised: #FFFFFF;
+  --color-ink: #211F1A;
+  --color-ink-soft: #6B6558;
+  --color-line: #E3DDD0;
+  --color-line-strong: #CFC8B8;
+
+  --color-brand: #1F5750;
+  --color-brand-dark: #143B36;
+  --color-brand-soft: #E4EEEC;
+
+  --color-rust: #C1592B;
+  --color-rust-soft: #F7E8DF;
+
+  --color-amber: #A66A00;
+  --color-amber-soft: #FBF1DD;
+
+  --color-danger: #B3261E;
+  --color-danger-soft: #FCE9E7;
+}
+
+html, body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* subtle canvas texture for the paper background */
+body {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(33,31,26,0.035) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
