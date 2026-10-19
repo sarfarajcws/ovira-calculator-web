@@ -28,7 +28,7 @@ export default function FormulaTable({ lines }) {
             Quantity
           </span>
           <span role="columnheader" className="font-medium text-right hidden sm:block">
-            Price/L
+            Price/ML
           </span>
           <span role="columnheader" className="font-medium text-right">
             Cost
